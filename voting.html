@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Online Voting System</h1>
+
+        <!-- Candidate Name Input -->
+        <div id="nameInput">
+            <input type="text" id="candidate1" placeholder="Enter Candidate 1 Name">
+            <input type="text" id="candidate2" placeholder="Enter Candidate 2 Name">
+            <button onclick="startVoting()">Start Voting</button>
+        </div>
+
+        <!-- Voting Section (Hidden Initially) -->
+        <div id="votingSection" style="display: none;">
+            <h2>Vote for Your Favorite Candidate</h2>
+            <button id="voteBtn1" onclick="vote('candidate1')"></button>
+            <button id="voteBtn2" onclick="vote('candidate2')"></button>
+
+            <h2>Results:</h2>
+            <p><span id="name1"></span>: <span id="votesA">0</span> votes</p>
+            <p><span id="name2"></span>: <span id="votesB">0</span> votes</p>
+            <button onclick="restart()">Restart</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
